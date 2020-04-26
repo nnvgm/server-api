@@ -6,3 +6,12 @@
 - Express
 - Node JS
 - Docker
+
+### Dev
+
+```
+# normal
+$ yarn dev
+# docker
+$ docker-compose up
+```

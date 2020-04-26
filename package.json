@@ -1,0 +1,20 @@
+{
+  "name": "serverapi",
+  "version": "1.0.0",
+  "description": "Example MERN Stack for my series Docker",
+  "main": "src/index.js",
+  "repository": "git@github.com:nnvgm/server-api.git",
+  "author": "Tuan Anh Nguyen <tuananh1998.hust@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

@@ -1,0 +1,30 @@
+version: '3.6'
+
+services:
+  server:
+    container_name: server-api
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 5000:5000
+    command: yarn dev
+    volumes:
+      - .:/app
+    networks:
+      - common
+    environment:
+      MONGO_URI: mongodb://mongo/test
+
+  mongo:
+    container_name: mongo
+    image: mongo:4.2-bionic
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    networks:
+      - common
+
+networks:
+  common:
