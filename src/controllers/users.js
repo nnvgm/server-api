@@ -23,11 +23,11 @@ async function GetUser(req, res) {
 
 async function CreateUser(req, res) {
   try {
-    const { name, age } = req.body;
+    const { name, phone } = req.body;
 
     const user = new User({
       name,
-      age,
+      phone,
     });
 
     await user.save();
@@ -51,11 +51,11 @@ async function CreateUser(req, res) {
 async function UpdateUser(req, res) {
   try {
     const { id } = req.params;
-    const { name, age } = req.body;
+    const { name, phone } = req.body;
     const user = await User.findById(id);
 
     user.name = name;
-    user.age = age;
+    user.phone = phone;
 
     await user.save();
 
